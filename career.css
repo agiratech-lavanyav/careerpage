@@ -1,0 +1,257 @@
+html body{
+     margin: 0 !important;
+}
+.main{
+     height: auto;
+     font-size: 20px;
+     font-family: 'Jost', sans-serif;
+}
+.header{
+     padding: 1.6em 2em;
+     background-color: #C7E7E4;
+     height: 80vh;
+     border-bottom-left-radius:60px ;
+     border-bottom-right-radius:60px ;
+
+}
+.header .navitems{
+     display: flex;
+     justify-content: space-around;
+}
+.navitems .logo{
+     margin-left: -4em;
+}
+.navitems .list ul li a {
+     text-decoration: none;
+     color: rgb(5, 5, 5);
+     font-size: 1.3em;
+     font-weight: 500;
+}
+.navitems .list ul li{
+     padding-right: 2.5em;
+}
+.navitems .list ul{
+     display: flex;
+     list-style: none;
+}
+
+.topsection{
+     padding: 1em 2em;
+     display: flex;
+     justify-content: space-evenly;
+}
+.topsection .head{
+     padding: 4em 0em;
+}
+.topsection .head span{
+     font-size: 5em;
+     color: #FF196C;
+}
+.topsection .head p{
+     font-size: 5em;
+     color: black;
+     margin: 0em;
+}
+.topsection .head button{
+     cursor: pointer;
+     margin-top: 2em;
+     font-size: 1em;
+     padding: 1em 3em;
+     background-color: #FFCB00;
+     border-radius: 20px;
+     border-style: none;
+}
+.section{
+     height: 30vh;
+}
+.aboutagira{
+     margin: -7em;
+     margin-right: 4em;
+     margin-left: 4em;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 3em;
+}
+.aboutagira .aboutagiracard{
+     padding: 3em 2em;
+     text-align: justify;
+}
+.aboutagira .aboutagiracard h2{
+     margin: 0;
+}
+.aboutagira .welfare{
+     background-color:#FF6F4E ;
+}
+.aboutagira .balance{
+     background-color:#45B1A9 ;
+} 
+.aboutagira .work{
+     background-color: #FF196C;
+}
+
+.jobsearch{
+     padding: 1em;
+     margin: -6em 0em;
+}
+.jobsearch .search{
+     /* background-color: #45B1A9; */
+     display: grid;
+     grid-template-columns:repeat(2,1fr);
+     gap: 30px;
+     margin: 2em;
+     border-style: none;
+     border-radius: 10px;
+}
+.jobsearch .search .innersearch{
+     padding-top: 8em;
+     padding-left: 6em;
+}
+.jobsearch .search input{
+     font-size: 1em;
+     background-color: #C7E7E4;
+     width: 75%;
+     padding: 1em ;
+     border-style: none;
+     border-radius: 10px;
+     font-family: 'Jost', sans-serif;
+}
+.jobsearch .search button{
+     cursor: pointer;
+     font-size: 1em;
+     padding: 1em ;
+     background-color: #FFCB00;
+     border-radius: 10px;
+     border-style: none;
+}
+
+.phrase{
+     /* margin:0em 7em; */
+     font-size: 3em;
+     font-weight: 700;
+     text-align: left;
+     padding-left: 0.3em;
+}
+
+.jobopenings{
+     padding: 3em;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap: 3em;
+}
+.job{
+     padding: 1em;
+     background-color: #F5FEFD;
+}
+.job button{
+     float: right;
+     cursor: pointer;
+     font-size: 0.8em;
+     padding: 0.6em 1em ;
+     background-color: #FFCB00;
+     border-radius: 10px;
+     border-style: none;
+}
+.fa-splotch{
+     color: #45B1A9;
+     padding-right: 10px;
+}
+.morejob{
+     text-align: center;
+     padding: 2em;
+}
+.morejob button{
+     cursor: pointer;
+     margin-top: 2em;
+     font-size: 1em;
+     padding: 1em 3em;
+     background-color: #FFCB00;
+     border-radius: 20px;
+     border-style: none;
+}
+.btn{
+     background-color: #FFCB00;
+     border-style: none;
+     padding: 10px;
+}
+
+.footer{
+     display: flex;
+     justify-content: space-between;
+     background-color: #45B1A9;
+     border-top-left-radius: 50px;
+     border-top-right-radius: 50px;
+}
+.footer p{
+     color: #fff;
+     padding: 1em 3em ;
+}
+.footer .socialicons{
+     color: #fff;
+     font-size: 1.5em;
+     padding: 1em 10em;
+}
+.footer .socialicons i{
+     padding-right: 20px;
+}
+
+.MultiCarousel {
+     float: left;
+      overflow: hidden;
+       /* padding: 15px; */
+        width: 97%;
+         position:relative;
+         margin-left:  20px;
+         margin-right:  20px;
+         margin-top: -4em;
+
+     }
+.MultiCarousel{ 
+    Height: 260px;
+}
+
+   .MultiCarousel .MultiCarousel-inner { 
+    transition: 1s ease all; float: left;
+
+}
+       .MultiCarousel .MultiCarousel-inner .item {
+          float: left;
+          width: 19% !important;
+          margin-right:20px ;
+     }
+       .MultiCarousel .MultiCarousel-inner .item > div { 
+         text-align: justify; padding:10px ; margin:10px; color:rgb(0, 0, 0);
+    }
+   .MultiCarousel .leftLst, .MultiCarousel .rightLst { 
+    position:absolute; border-radius:50%;top:calc(50% - 20px); 
+}
+   .MultiCarousel .leftLst { left:0; }
+   .MultiCarousel .rightLst { right:0; }
+   
+       .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+          pointer-events: none; background:#ccc; 
+         }
+
+         .fa-face-smile{
+          color: #fff;
+          padding-right: 10px;
+         }
+
+@media only screen and (max-width: 768px){
+     .main{
+          font-size: 10px;
+     }
+     .topsection{
+          flex-direction: column;
+     }
+     .logo img{
+          display: none;
+     }
+     .image img{
+          width: 300px;
+          height: 300px;
+     }
+     .aboutagira{
+          grid-template-columns: repeat(1,1fr);
+     }
+}
+

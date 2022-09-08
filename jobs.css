@@ -1,0 +1,104 @@
+.container{
+     font-size: 20px;
+     font-family: 'Jost', sans-serif;
+}
+.header{
+     padding: 0.6em 0em;
+     background-color: #45B1A9;
+     /* border-bottom-left-radius:20px ;
+     border-bottom-right-radius:20px ; */
+}
+
+.header .navitems{
+     display: flex;
+     justify-content: space-around;
+}
+.navitems .logo{
+     margin-left: -4em;
+}
+.navitems .list ul li a {
+     text-decoration: none;
+     color: #fff;
+     font-size: 1.3em;
+     font-weight: 500;
+}
+.navitems .list ul li{
+     padding-right: 2.5em;
+}
+.navitems .list ul{
+     display: flex;
+     list-style: none;
+}
+
+.searchfield{
+     margin-top: 5px;
+     background-color: #C7E7E4;
+     padding: 1em;
+}
+.search input,button{
+     padding: 1em;
+     border-radius: 10px;
+     border-style: none;
+}
+.search input{
+     width: 68%;
+}
+.search button{
+     background-color:#FFCB00 ;
+}
+.dataitems{
+     display: flex;
+}
+.joblists{
+     width: 25%;
+}
+.jobdescription{
+     height: auto;
+}
+.job{
+     padding: 1em;
+     margin: 1em 0em;
+     background-color: #C7E7E4;
+}
+.job span{
+     color: #45B1A9;
+     font-weight: bold;
+}
+.job h6{
+     margin: 0;
+     font-size: 0.8em;
+     font-weight: 500;
+}
+.job h2{
+     margin: 0.2em 0em;
+}
+.listofjobs{
+     height: 100vh;
+     overflow: auto;
+}
+.jobdescription{
+     width: 70vw;
+     margin-top: 3em;
+     margin-bottom: 0em;
+     margin-left: 3em;
+     margin-right: 3em;
+     padding: 2em;
+     padding-bottom: 0em;
+     border: 1px solid #45B1A9;
+     border-radius: 10px;
+     text-align: justify;
+}
+.topheader{
+     display: flex;
+     justify-content: space-between;
+}
+.actionbuttons{
+     padding: 2em;
+}
+.actionbuttons button{
+     background-color: #FFCB00;
+     font-family: 'Jost', sans-serif;
+     font-weight: 600;
+     font-size: 0.8em;
+     cursor: pointer;
+}
