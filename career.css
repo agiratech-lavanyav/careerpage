@@ -1,3 +1,6 @@
+html{
+     scroll-behavior: smooth;
+}
 html body{
      margin: 0 !important;
 }
@@ -60,6 +63,9 @@ html body{
      background-color: #FFCB00;
      border-radius: 20px;
      border-style: none;
+     font-family: 'Jost', sans-serif;
+     font-weight: bold;
+
 }
 .section{
      height: 30vh;
@@ -91,7 +97,6 @@ html body{
 
 .jobsearch{
      padding: 1em;
-     margin: -6em 0em;
 }
 .jobsearch .search{
      /* background-color: #45B1A9; */
@@ -99,6 +104,7 @@ html body{
      grid-template-columns:repeat(2,1fr);
      gap: 30px;
      margin: 2em;
+     margin-bottom: 0em !important;
      border-style: none;
      border-radius: 10px;
 }
@@ -125,7 +131,6 @@ html body{
 }
 
 .phrase{
-     /* margin:0em 7em; */
      font-size: 3em;
      font-weight: 700;
      text-align: left;
@@ -134,6 +139,7 @@ html body{
 
 .jobopenings{
      padding: 3em;
+     padding-top: 0em !important;
      display: grid;
      grid-template-columns: repeat(3,1fr);
      gap: 3em;
@@ -151,8 +157,12 @@ html body{
      border-radius: 10px;
      border-style: none;
 }
-.fa-splotch{
-     color: #45B1A9;
+.fa-quote-left{
+     color: #fdfdfd;
+     padding-right: 10px;
+}
+
+.fa-connectdevelop{
      padding-right: 10px;
 }
 .morejob{
@@ -194,64 +204,242 @@ html body{
      padding-right: 20px;
 }
 
-.MultiCarousel {
-     float: left;
-      overflow: hidden;
-       /* padding: 15px; */
-        width: 97%;
-         position:relative;
-         margin-left:  20px;
-         margin-right:  20px;
-         margin-top: -4em;
-
+.topsection .head .animate-txt span{
+    display: inline-block;
+    display: none;
+}
+.topsection .head .animate-txt span.text-in{
+     display: block;
+     animation: textIn 1.5s ease-in-out;
+}
+@keyframes textIn{
+     0%{
+          transform: translateY(40%);
      }
-.MultiCarousel{ 
-    Height: 260px;
-}
-
-   .MultiCarousel .MultiCarousel-inner { 
-    transition: 1s ease all; float: left;
-
-}
-       .MultiCarousel .MultiCarousel-inner .item {
-          float: left;
-          width: 19% !important;
-          margin-right:20px ;
+     100%{
+          transform: translateY(0%);
      }
-       .MultiCarousel .MultiCarousel-inner .item > div { 
-         text-align: justify; padding:10px ; margin:10px; color:rgb(0, 0, 0);
-    }
-   .MultiCarousel .leftLst, .MultiCarousel .rightLst { 
-    position:absolute; border-radius:50%;top:calc(50% - 20px); 
 }
-   .MultiCarousel .leftLst { left:0; }
-   .MultiCarousel .rightLst { right:0; }
-   
-       .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
-          pointer-events: none; background:#ccc; 
-         }
 
-         .fa-face-smile{
+.image img{
+     animation: slide 1.5s ease-in-out;
+}
+@keyframes slide{
+     0%{
+          transform: translateX(100%);
+     }
+     100%{
+          transform: translateX(0%);
+     }
+}
+.head{
+     animation: headslide 1.5s ease-in-out;
+}
+@keyframes headslide{
+     0%{
+          transform: translateX(-80%);
+     }
+     100%{
+          transform: translateX(0%);
+     }
+}
+
+/* Carousel */
+.container {
+     margin-top: -6em;
+     width: 100%;
+     overflow: hidden;
+     position: relative;
+ }
+ 
+     .items {
+         display: flex;
+         align-items: center;
+         width: fit-content;
+         animation: carouselAnim 60s infinite alternate linear;
+     }
+ 
+         .entry {
           color: #fff;
-          padding-right: 10px;
+          text-align: justify;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+             position: relative;
+             width: 300px;            
+             margin: 1em;
+             padding: 1em;
+             border-radius: 10px;
+             box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.05);
+         }
+ 
+             
+             
+             @keyframes carouselAnim {
+                 from {
+                     transform: translate(0,0);
+                 }
+                 to {
+                     transform: translate(calc(-100% + (5*300px)));
+                 }
+             }
+ 
+             @media screen and (min-device-width: 320px)
+             and (max-device-width: 480px) {   
+                .items {
+             animation: carouselAnim 30s infinite alternate linear;
+         }
+         .entry{
+           width: 200px;
+         }
+ 
+         @keyframes carouselAnim {
+             from {
+                 transform: translate(0,0);
+             }
+             to {
+                 transform: translate(calc(-100% + (2*300px)));
+             }
+         }
+     }
+ 
+     .faders {
+         width: 100%;
+         position: absolute;
+         height: 100%;
+     }
+ 
+         .faders .left, .right {
+             background: linear-gradient(to right, rgba(245,245,245,1) 0%,rgba(255,255,255,0) 100%);
+             width: 20%;
+             height: 100%;
+             position: absolute;
+             z-index: 200;
+         }
+ 
+         .faders .right {
+             right: 0;
+             background: linear-gradient(to left, rgba(245,245,245,1) 0%,rgba(255,255,255,0) 100%);
          }
 
-@media only screen and (max-width: 768px){
+
+         /* media query for mobile device */
+     
+@media screen and (min-device-width: 320px)
+and (max-device-width: 480px) {
      .main{
           font-size: 10px;
      }
+   
      .topsection{
           flex-direction: column;
      }
-     .logo img{
-          display: none;
+     .header{
+          border-radius: 0px;
      }
+     
      .image img{
-          width: 300px;
-          height: 300px;
+          width: 318px;
+          height: 295px;
      }
      .aboutagira{
           grid-template-columns: repeat(1,1fr);
      }
+     .jobsearch .search{
+          grid-template-columns: repeat(1,1fr);
+          gap: 0px;
+     }
+     .phrase{
+          margin-top: -55px;
+     }
+     .jobsearch .search .innersearch{
+          padding: 0px;
+          margin-bottom: 20px;
+     }
+     .jobopenings{
+          grid-template-columns: repeat(1,1fr);
+          gap: 1em;
+          padding-bottom: 0em;
+     }
+     .morejob{
+          padding-top: 0em;
+     }
+     
+     .jobsearch .search input {
+          width: 77%;
+     }
+     .jobsearch {
+          padding-top: 0px;
+          margin-top: -3em;
+     }
+     .footer{
+          border-radius: 0px;
+     }
+     .footer .socialicons i {
+          padding-right: 3px;
+      }
+     .logo img{
+          width: 97px;
+          padding-left: 20px;
+     }
+     .footer .socialicons{
+          padding: 0em;
+          padding-top:18px ;
+          padding-right: 7px;
+     }
+     .footer p {
+          padding: 1em 1em;
+     }
+     
 }
+
+/* media query for tablet/ipad */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+
+     .jobopenings{
+          grid-template-columns: repeat(2,1fr);
+     }
+     .topsection{
+          flex-direction: column;
+     }
+     .header{
+          height: 120vh;
+     }
+     .navitems .logo img{
+          padding-left: 40px ;
+     }
+     .jobsearch .search .innersearch{
+          padding: 0 0 10px 0;
+     }
+     .phrase{
+          margin-top: 0;
+          margin-bottom: 0px;
+     }
+     .jobsearch .search{
+          grid-template-columns: repeat(1,1fr);
+     }
+     .morejob button {
+          margin-top: 0em;
+     }
+     .footer{
+          border-radius: 0px;
+     }
+
+.footer p {
+     padding: 1em 2em;
+ }
+     .footer .socialicons {
+          padding: 1em .5em 1em 0em;
+     }
+     .footer .socialicons i{
+          padding-right: 3px;
+     }
+}
+
+
+
+
+
+
 

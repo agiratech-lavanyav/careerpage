@@ -1,3 +1,6 @@
+html body{
+     margin: 0;
+}
 .container{
      font-size: 20px;
      font-family: 'Jost', sans-serif;
@@ -5,8 +8,6 @@
 .header{
      padding: 0.6em 0em;
      background-color: #45B1A9;
-     /* border-bottom-left-radius:20px ;
-     border-bottom-right-radius:20px ; */
 }
 
 .header .navitems{
@@ -39,12 +40,14 @@
      padding: 1em;
      border-radius: 10px;
      border-style: none;
+     font-family: 'Jost', sans-serif;
 }
 .search input{
      width: 68%;
 }
 .search button{
      background-color:#FFCB00 ;
+     font-weight: bold;
 }
 .dataitems{
      display: flex;
@@ -79,7 +82,7 @@
 .jobdescription{
      width: 70vw;
      margin-top: 3em;
-     margin-bottom: 0em;
+     margin-bottom: 2em;
      margin-left: 3em;
      margin-right: 3em;
      padding: 2em;
@@ -101,4 +104,127 @@
      font-weight: 600;
      font-size: 0.8em;
      cursor: pointer;
+}
+.footer{
+     display: flex;
+     justify-content: space-between;
+     background-color: #45B1A9;
+     
+}
+.footer p{
+     color: #fff;
+     padding: 1em 3em ;
+}
+.footer .socialicons{
+     color: #fff;
+     font-size: 1.5em;
+     padding: 1em 10em;
+}
+.footer .socialicons i{
+     padding-right: 20px;
+}
+.fa-connectdevelop{
+     padding-right: 10px;
+}
+
+/* media query for mobile devices  */
+
+@media screen and (min-device-width: 320px)
+and (max-device-width: 480px){ 
+.container{
+     font-size: 10px;
+     font-family: 'Jost', sans-serif;
+}
+.logo img{
+     width: 97px;
+}
+.navitems .logo {
+     margin-left: 0em;
+ }
+ .dataitems {
+     flex-direction: column;
+ }
+ .joblists {
+     width: auto;
+     margin: 0 1em;
+     
+ }
+ .listofjobs{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap: 1em;
+ }
+ .job{
+     margin: 0em;
+ }
+ .searchfield{
+     margin-bottom: 1em;
+ }
+ .actionbuttons{
+     padding: 0;
+     padding-top: 1em;
+ }
+ .jobdescription{
+     margin: 1em;
+     width: 84vw;
+ }
+ .footer{
+     border-radius: 0px;
+}
+.footer .socialicons i {
+     padding-right: 3px;
+ }
+.logo img{
+     width: 97px;
+     padding-left: 20px;
+}
+.footer .socialicons{
+     padding: 0em;
+     padding-top:18px ;
+     padding-right: 7px;
+}
+.footer p {
+     padding: 1em 1em;
+}
+}
+
+/* media query for tablet/ipad */
+
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+     .logo img{
+          padding-left: 50px;
+     }
+     .search input, button {
+          padding: 0.5em;
+     }
+     .search input {
+          width: 60%;
+      }
+.listofjobs {
+     height: 152vh;
+}
+.joblists {
+     width: 36%;
+ }
+.jobdescription{
+     margin: 1em;
+     padding: 1em;
+}
+.actionbuttons {
+     padding: 1.5em 0em;
+ }
+     .footer{
+          border-radius: 0px;
+     }
+
+.footer p {
+     padding: 1em 2em;
+ }
+     .footer .socialicons {
+          padding: 1em .5em 1em 0em;
+     }
+     .footer .socialicons i{
+          padding-right: 3px;
+     }
 }
